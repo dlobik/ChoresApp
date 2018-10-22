@@ -28,14 +28,66 @@ namespace projChorez
 
         public static List<Chore> choreList = new List<Chore>(); //a list of chore objects
         public static List<Roommate> roommateList = new List<Roommate>(); //a list of roommate objects
+        
 
         //**moved these up here becasue I want to create methods for all of the code in (MAIN) method**
         public static int numOfRoommates = 0; //number of roommates living in the house **** this can become List<Roomates>.Size()
         public static int numOfChores = 0; // **new thought - this can become List<Chores>.Size()
 
+
         public static void Main(string[] args)
         {
 
+            Console.WriteLine("Welcome to RJ's Chore Program!");
+            Console.WriteLine("");
+            Console.WriteLine("Please press any key to continue and start this program!");
+            Console.WriteLine("");
+            Console.ReadKey();
+
+            Console.WriteLine("Please enter the number of roommates in your household.");
+            Console.WriteLine("");
+            int numOfRoommates = Convert.ToInt32(Console.ReadLine()); //getting user input for number of roommates
+            string[] roommates = new string[numOfRoommates]; //creating array to store roommate names based off the size of user input
+            Console.WriteLine("Thank you for your input, I see you have " + numOfRoommates + " roommates in your house.");
+            Console.WriteLine("");
+            for (int i = 0; i < numOfRoommates; i++) //loop until less than(not equal to, we dont want it to go +1 times), numofRoommates, add to roommates array, starting at index 0
+            {
+                Console.WriteLine("Please enter the name of a roommate.");
+                Console.WriteLine("");
+                string roommate = Console.ReadLine();
+                roommates[i] = roommate;
+                Console.WriteLine("Thank you! I have added " + roommate + " to the list of current roommates.");
+                Console.WriteLine("");
+            }
+            Console.WriteLine("All of the roommates I have added are listed below");
+            Console.WriteLine();
+            for (int i = 0; i < roommates.Length; i++)
+            {
+                Console.WriteLine(roommates[i]);
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Thank you! All of the roommates have now been added, please press any key to continue this program.");
+            Console.WriteLine("");
+            Console.ReadKey();
+            Console.WriteLine("");
+
+            Console.WriteLine("Excellent. Lets move forward and add what chores we need to accomplish");
+            Console.WriteLine("Please enter the number of chores to complete in your household.");
+            Console.WriteLine("");
+            int numOfChores = Convert.ToInt32(Console.ReadLine()); //getting user input for number of chores
+            string[] chores = new string[numOfChores]; //creating array to store chores names based off the size of user input
+            Console.WriteLine("Thank you for your input, I see you have " + numOfChores + " roommates in your house.");
+            Console.WriteLine("");
+            for (int i = 0; i < numOfChores; i++) //loop until less than(not equal to, we dont want it to go +1 times), numOfChores, add to chores array, starting at index 0
+            {
+                Console.WriteLine("Please enter the name of a Chore.");
+                Console.WriteLine("");
+                string chore = Console.ReadLine();
+                chores[i] = chore;
+                Console.WriteLine("Thank you! I have added " + chore + " to the list of current roommates.");
+                Console.WriteLine("");
+            }
 
         }
     }
