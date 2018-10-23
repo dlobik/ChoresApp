@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChoreApplication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,20 +7,47 @@ using System.Threading.Tasks;
 
 namespace projChorez
 {
-    public class Chore
+    public class Chore : IChores
     {
-        public string Name { get; set; }
-        public int Diff { get; set; }
 
-        //public Chore(string _Name, _Diff)
-        //{
+        public string choreName;
+        public int choreDifficulty;
 
-        //}
-
-
-        public static void AddChore(string cName, int cDifficulty) //need to pass in the name of the chore and the difficulty of it
+        public Chore()
         {
-        
+           
+        }
+
+        public Chore(string _cName, int _cDiff)
+        {
+            choreName = _cName;
+            choreDifficulty = _cDiff;
+        }
+
+
+        public void Add()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Verify()
+        {
+            throw new NotImplementedException();
         }
     }
 }

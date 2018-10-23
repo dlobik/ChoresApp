@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChoreApplication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace projChorez
 {
-    class Roommate
+    class Roommate : IChores
     {
 
         //how do I want to handle adding a roommate?
@@ -17,26 +18,45 @@ namespace projChorez
         private string name;
         private char gender; //either M or F --- this doesn't really matter, just want to test having more than one field for furture builds
 
-        public static List<Roommate> roommateList = new List<Roommate>(); //roommates and their gender
+        public Roommate()
+        {
 
+        }
 
         public Roommate(string name_, char gender_)
         {
             name = name_;
             gender = gender_;
         }
-        private static void AddRoommate(string name_, string gender_)
+
+        public void Add()
         {
-
-        }
-        public static void AddRoommates()
-        {
-
-
+            throw new NotImplementedException();
         }
 
-        //create method 
-        //VERIFY ROOMMATES
-        //gives user option to clear out current roommates entered
+        public void Delete()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void List()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Verify()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            return name + " " + gender.ToString();
+        }
     }
 }
