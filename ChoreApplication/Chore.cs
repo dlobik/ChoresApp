@@ -25,7 +25,7 @@ namespace projChorez
         }
 
 
-        public void Add()
+        public void Initialize()
         {
             throw new NotImplementedException();
         }

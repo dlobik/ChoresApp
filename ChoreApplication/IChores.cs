@@ -8,7 +8,7 @@ namespace ChoreApplication
 {
     public interface IChores
     {
-        void Add(); //add a roommate/ chore to the list 
+        void Initialize(); //add a roommate/ chore to the list 
         void Delete(); //self explanatory, not sure wether to go by list index, or to search list for name / chore? unsure at this moment
         void Update(); //may not use, vision is to be able to update a roommate, might be better when this isn't a console application
 

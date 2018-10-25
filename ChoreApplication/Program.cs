@@ -18,8 +18,8 @@ namespace projChorez
         //the list that we have in local memory created in this main class
 
         public static List<Chore> choreList = new List<Chore>(); //a list of chore objects
-        public static List<Roommate> roommateList = new List<Roommate>(); //a list of roommate objects
-        public Roommate _roommate = new Roommate();
+        //public static List<Roommate> roommateList = new List<Roommate>(); //a list of roommate objects
+       
 
 
         //**moved these up here becasue I want to create methods for all of the code in (MAIN) method**
@@ -29,55 +29,21 @@ namespace projChorez
 
         public static void Main(string[] args)
         {
+             Roommate _roommate = new Roommate();
 
-
-            /* 
-             * Welcoming user to the program
-             */
+        /* 
+         * Welcoming user to the program
+         */
             Console.WriteLine("Welcome to RJ's Chore Program!");
             Console.WriteLine("");
             Console.WriteLine("Please press any key to continue and start this program!");
             Console.WriteLine("");
             Console.ReadKey();
+            _roommate.Initialize();
 
-
+           
             /* 
-             * Adding roommates to the roomates array
-             */
-            Console.WriteLine("Please enter the number of roommates in your household.");
-            Console.WriteLine("");
-            int numOfRoommates = Convert.ToInt32(Console.ReadLine()); //getting user input for number of roommates
-            string[] roommates = new string[numOfRoommates]; //creating array to store roommate names based off the size of user input
-            Console.WriteLine("Thank you for your input, I see you have " + numOfRoommates + " roommates in your house.");
-            Console.WriteLine("");
-
-            /*
-             *  testing creating roommate objects
-             */
-            //Console.WriteLine("Please enter a roommate name and gender");
-            //string name = Console.ReadLine();
-            //Console.WriteLine("Now gender (M or F) please.");
-            //char gender = Console.ReadKey().KeyChar;
-            //Roommate testRoommate = new Roommate(name, gender);
-            //Console.WriteLine("Here is the test roommate!!!! " + testRoommate.ToString());
-
-            for (int i = 0; i < numOfRoommates; i++) //loop until less than(not equal to, we dont want it to go +1 times), numofRoommates, add to roommates array, starting at index 0
-            {
-                Console.WriteLine("Please enter the name of a roommate.");
-                Console.WriteLine("");
-                string name = Console.ReadLine();
-                Console.WriteLine();
-                Console.WriteLine("Please enter the gender of " + name + ".");
-                Console.WriteLine();
-                char gender = Console.ReadKey().KeyChar;
-                Roommate roommate = new Roommate(name, gender);
-                roommateList.Add(roommate);
-                Console.WriteLine("Thank you! I have added " + name + " " + gender + " to the list of current roommates.");
-                Console.WriteLine("");
-            }
-
-            /* 
-             * Printing out what is stored in the chores roommates
+             * Printing out what is stored in the roommateList list
              */
             Console.WriteLine("All of the roommates I have added are listed below");
             Console.WriteLine();
