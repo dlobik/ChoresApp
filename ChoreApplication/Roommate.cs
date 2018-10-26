@@ -30,7 +30,10 @@ namespace projChorez
             gender = gender_;
         }
 
-        public void Initialize(string rName_, char r_Gender)
+        /* 
+         * Initializes RoommateList for the program
+         */
+        public void Initialize()
         {
             Console.WriteLine("Please enter the number of roommates in your household.");
             Console.WriteLine("");
@@ -40,21 +43,27 @@ namespace projChorez
             Console.WriteLine("");
 
             //loop until less than(not equal to, we dont want it to go +1 times), numofRoommates, add to roommateList list, starting at index 0
-            for (int i = 0; i < numOfRoommates; i++) 
+            for (int i = 0; i < numOfRoommates; i++)
             {
                 Console.WriteLine("Please enter the name of a roommate.");
                 Console.WriteLine("");
                 string name = Console.ReadLine();
-                Console.WriteLine();
-                Console.WriteLine("Please enter " + name + "'s name.");
-                Console.WriteLine();
+                Console.WriteLine("");
+                Console.WriteLine("Please enter " + name + "'s gender.");
+                Console.WriteLine("");
                 char gender = Console.ReadKey().KeyChar;
-                Roommate roommate = new Roommate(name, gender);  //is using a constructor a viable option for a (Create method?...) ... feel like it should be, creating the object... unsure for now, going to leave it just using constructor
+                Console.WriteLine("");
+                /*
+                 * is using a constructor a viable option for a (Create method?...)
+                 * feel like it should be, creating the object... unsure for now, going to leave it just using constructor
+                 * Leaving it this way, may change later, more and more I think about it, can't find a reason why I would make a separate method to do exactly what a constructor is going to do
+                */
+                Roommate roommate = new Roommate(name, gender);
                 Console.WriteLine("Thank you! I have added " + name + " " + gender + " to the list of current roommates.");
-                Console.WriteLine("");               
+                Console.WriteLine("");
             }
-        }
 
+        }
         public void Delete()
         {
             throw new NotImplementedException();
@@ -65,9 +74,18 @@ namespace projChorez
             throw new NotImplementedException();
         }
 
+        /*
+         * Prints a list of all objects in the RoommateList list
+         */
         public void List()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("All of the roommates I have added are listed below");
+            Console.WriteLine();
+            for (int i = 0; i < roommateList.Count; i++)
+            {
+                Console.WriteLine(roommateList[i].ToString());
+                Console.WriteLine();
+            }
         }
 
         public void Verify()
@@ -78,11 +96,6 @@ namespace projChorez
         public override string ToString()
         {
             return name + " " + gender.ToString();
-        }
-
-        public void Initialize()
-        {
-            throw new NotImplementedException();
         }
     }
 }
