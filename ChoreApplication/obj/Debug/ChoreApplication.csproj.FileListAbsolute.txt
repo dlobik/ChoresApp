@@ -3,3 +3,4 @@ C:\Users\RJ\ChoreApplication\ChoreApplication\bin\Debug\ChoreApplication.exe
 C:\Users\RJ\ChoreApplication\ChoreApplication\bin\Debug\ChoreApplication.pdb
 C:\Users\RJ\ChoreApplication\ChoreApplication\obj\Debug\ChoreApplication.exe
 C:\Users\RJ\ChoreApplication\ChoreApplication\obj\Debug\ChoreApplication.pdb
+C:\Users\RJ\ChoreApplication\ChoreApplication\obj\Debug\ChoreApplication.csprojResolveAssemblyReference.cache

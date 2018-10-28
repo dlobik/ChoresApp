@@ -18,6 +18,7 @@ namespace projChorez
         private string name;
         private char gender; //either M or F --- this doesn't really matter, just want to test having more than one field for furture builds
         public static List<Roommate> roommateList = new List<Roommate>(); //a list of roommate objects
+        public static List<Chore> choresAssignedList = new List<Chore>();
 
         public Roommate()
         {

@@ -13,6 +13,7 @@ namespace projChorez
         public string choreName;
         public int choreDifficulty;
         public static List<Chore> choreList = new List<Chore>(); //a list of roommate objects
+        public int numOfChores = 0;
 
 
         public Chore()
@@ -33,7 +34,7 @@ namespace projChorez
         {
             Console.WriteLine("Please enter the number of Chores for your household");
             Console.WriteLine("");
-            int numOfChores = Convert.ToInt32(Console.ReadLine()); //getting user input for number chores          
+            numOfChores = Convert.ToInt32(Console.ReadLine()); //getting user input for number chores          
             Console.WriteLine("Thank you for your input, I see you have " + numOfChores + " chores to complete in your house.");
             Console.WriteLine("");
             //need to create logic here to create an array based off of how many chores are entered

@@ -41,10 +41,6 @@ namespace projChorez
             _roommate.List();
 
 
-
-
-
-
             /* 
              * Transition period from roommate adding to chore adding
              */
@@ -63,9 +59,6 @@ namespace projChorez
              */
             _chore.List();
             
-
-
-
             /* 
              * Assign chores to individual roommates (randomly)
              * number of chores / number of roommates (change this to chore difficulty later)
