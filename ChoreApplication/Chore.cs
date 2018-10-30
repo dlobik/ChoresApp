@@ -14,7 +14,11 @@ namespace projChorez
         public int choreDifficulty;
         public static List<Chore> choreList = new List<Chore>(); //a list of roommate objects
         public int numOfChores = 0;
+        public int totalChoreDifficulty = 0;
 
+
+        //I need to get the ideal choreDifficulty score eventually, not sure when or where I should calculate that
+        //..... should do it after I get the "numOfChores" , total cDifficulty would be the summation of numOfChores
 
         public Chore()
         {
@@ -27,6 +31,14 @@ namespace projChorez
             choreDifficulty = _cDiff;
         }
 
+        public void Assign()
+        {
+            
+            for (int i = 0; i < choreList.Count; i++)
+            {
+                Random random = new Random();  //chore that is going to be assigned to roommate
+            }
+        }
 
         /* Initializes choreList of the program
          */
@@ -34,23 +46,24 @@ namespace projChorez
         {
             Console.WriteLine("Please enter the number of Chores for your household");
             Console.WriteLine("");
-            numOfChores = Convert.ToInt32(Console.ReadLine()); //getting user input for number chores          
+            numOfChores = Convert.ToInt32(Console.ReadLine()); //getting user input for number chores
+            int[] choreDifficulty = new int[numOfChores]; // giving the user options for choosing chore difficulty
+            for (int i = 0; i < choreDifficulty.Length; i++)
+            {
+                choreDifficulty[i] = i + 1; //i + 1 because i will start at 0 like array index does, so start at array[0] but with value of 1
+            }
+
+            for (int i = 0; i <= numOfChores; i++) //getting our total chore difficulty so we can divide by the "numOfRoommates" to get our fair cDiff number
+            {
+                totalChoreDifficulty += i;
+            }
+            //Console.WriteLine(totalChoreDifficulty); //testing chore difficulty 
             Console.WriteLine("Thank you for your input, I see you have " + numOfChores + " chores to complete in your house.");
             Console.WriteLine("");
-            //need to create logic here to create an array based off of how many chores are entered
-            //ex numOfChores = 5, array would be initialized to [4] with index[0] starting at 1 and index[4] ending at numOfChores
-            //when a user sets a chore difficulty, remove that element from the array, and only let them assign from the remaining numbers
-            //ex: User selects difficulty level 5 for chore "dishes", for next chore "garbage" options would not list 5 as an option
-            //choreDifficulties[numOfChores] 
-            //^^ populate with loop starting at 1 going to numOfChores
-            //{1,2,3,4,5}
-            //if (5 selected)
-            //{remove 5 from list, maybe even shrink the array for memory issues?....}
-            //enter next chore name
-            //list options, {1,2,3,4}
-            //user selects 2
-            //remove 2, new list is {1,2,3,4}
-            //not sure how to slowly shrink list, might just use a different method to assign difficulty, wanted to get this down on paper while it was fresh in my mind
+            Console.WriteLine("Please assign these chores a difficulty level, it may range from " + choreDifficulty[0] + " to " + choreDifficulty.Max()); //telling the user what the range to assign chores is
+            
+
+            //read notepad++ documentation on chore assignment algorithm
 
             //loop until less than(not equal to, we dont want it to go +1 times), numofRoommates, add to roommateList list, starting at index 0
             for (int i = 0; i < numOfChores; i++)
@@ -109,5 +122,6 @@ namespace projChorez
         {
             throw new NotImplementedException();
         }
+
     }
 }

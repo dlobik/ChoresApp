@@ -34,11 +34,14 @@ namespace projChorez
             /* 
             * Adding roommates to the roommate list
             */
-            _roommate.Initialize();
+            
+            //_roommate.Initialize();
+            
             /* 
             * Printing out what is stored in the roommateList list
             */
-            _roommate.List();
+            
+            //_roommate.List();
 
 
             /* 
@@ -58,7 +61,7 @@ namespace projChorez
              * Printing out what is stored in the chores array
              */
             _chore.List();
-            
+
             /* 
              * Assign chores to individual roommates (randomly)
              * number of chores / number of roommates (change this to chore difficulty later)
