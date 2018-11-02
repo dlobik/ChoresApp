@@ -22,6 +22,11 @@ namespace projChorez
             Roommate _roommate = new Roommate();
             Chore _chore = new Chore();
 
+            List<Chore> choreList = new List<Chore>(); //a list of roommate objects
+            List<Roommate> roommateList = new List<Roommate>();
+            int numOfRoommates = 0;
+            int numOfChores = 0;
+            int totalChoreDifficulty = 0;
 
             /* 
              * Welcoming user to the program
@@ -34,8 +39,9 @@ namespace projChorez
             /* 
             * Adding roommates to the roommate list
             */
-            
-            //_roommate.Initialize();
+
+            //numOfRoommates = _roommate.GetNumberOfRoommates();
+            //roommateList = _roommate.Initialize(numOfRoommates);
             
             /* 
             * Printing out what is stored in the roommateList list
@@ -53,15 +59,18 @@ namespace projChorez
             Console.WriteLine("");
 
             /* 
-             * Adding chores to the chore array
+             * Adding chores to the chore List
              */
-            _chore.Initialize();
+            numOfChores =_chore.GetNumberOfChores();
+            choreList = _chore.Initialize(numOfChores);
+            totalChoreDifficulty = _chore.GetTotalDifficulty(choreList);
+            Console.WriteLine("The total difficulty of all chores is " + totalChoreDifficulty);
 
             /* 
              * Printing out what is stored in the chores array
              */
-            _chore.List();
-
+            _chore.List(choreList);
+            Console.ReadKey();
             /* 
              * Assign chores to individual roommates (randomly)
              * number of chores / number of roommates (change this to chore difficulty later)
@@ -70,6 +79,12 @@ namespace projChorez
              * check to make sure it's within a certain tolerance of average CP (lets say 5 CPs)
              * if someone has too many CP's, adjust
              */
+            Console.WriteLine("Now for the fun part! We need to assign chores!");
+            Console.WriteLine();
+
+            //how many chores / how many roommates = chores per roommate
+           
+
 
 
         }
