@@ -12,7 +12,8 @@ namespace projChorez
         private string name;
         private char gender; //either M or F --- this doesn't really matter, just want to test having more than one field for furture builds
         List<Roommate> roommateList = new List<Roommate>();
-        public int numOfRoommates = 0;
+        private int numOfRoommates = 0;
+        private List<int> assignedChores = new List<int>();
 
         public Roommate()
         {
@@ -92,6 +93,11 @@ namespace projChorez
         public override string ToString()
         {
             return name + " " + gender.ToString();
+        }
+
+        public string GetName(Roommate roommate)
+        {
+            return roommate.name;
         }
     }
 }

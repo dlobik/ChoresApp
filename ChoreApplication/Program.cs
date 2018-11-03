@@ -40,14 +40,14 @@ namespace projChorez
             * Adding roommates to the roommate list
             */
 
-            //numOfRoommates = _roommate.GetNumberOfRoommates();
-            //roommateList = _roommate.Initialize(numOfRoommates);
-            
+            numOfRoommates = _roommate.GetNumberOfRoommates();
+            roommateList = _roommate.Initialize(numOfRoommates);
+
             /* 
             * Printing out what is stored in the roommateList list
             */
-            
-            //_roommate.List();
+
+            _roommate.List(roommateList);
 
 
             /* 
@@ -82,7 +82,19 @@ namespace projChorez
             Console.WriteLine("Now for the fun part! We need to assign chores!");
             Console.WriteLine();
 
-            //how many chores / how many roommates = chores per roommate
+
+            //assign roommates random #'s in an array
+            //loop through each roommates array and compare that number
+
+            //roommate[i].name has to complete the following chores
+            //loop roommate.assignedChores[]
+
+            for (int i = 0; i < roommateList.Count; i++)
+            {
+                string name = _roommate.GetName(roommateList[i]);
+                Console.WriteLine(name);
+            }
+            Console.ReadKey();
            
 
 
