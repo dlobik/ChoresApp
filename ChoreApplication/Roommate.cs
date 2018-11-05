@@ -99,5 +99,10 @@ namespace projChorez
         {
             return roommate.name;
         }
+
+        public void AssignChore(Roommate roommate, int choreIndex)
+        {
+            roommate.assignedChores.Add(choreIndex);
+        }
     }
 }

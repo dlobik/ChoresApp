@@ -50,8 +50,6 @@ namespace projChorez
                  }
              */
 
-
-
         }
 
         /* Initializes choreList of the program
@@ -93,6 +91,16 @@ namespace projChorez
             }
 
             return choreList;
+        }
+
+        public string GetName(Chore chore)
+        {
+            return chore.choreName;
+        }
+
+        public int GetDiff(Chore chore)
+        {
+            return chore.choreDifficulty;
         }
 
         public int GetTotalDifficulty(List<Chore> choreList)

@@ -91,10 +91,18 @@ namespace projChorez
 
             for (int i = 0; i < roommateList.Count; i++)
             {
-                string name = _roommate.GetName(roommateList[i]);
-                Console.WriteLine(name);
+                List<Chore> _choreList = new List<Chore>();
+                string rName = _roommate.GetName(roommateList[i]); //get the first roommate in the roommate list
+                Random random = new Random();
+                int randomNumber = random.Next(0, numOfRoommates);
+                string cName = _chore.GetName(_choreList[randomNumber]);
+                int diff = _chore.GetDiff(_choreList[randomNumber]);
+
+                //I need the roommate at index I to have the chore index added to his List<int>
+                Roommate _roommate2 = roommateList[i];
+                _roommate2.AssignChore(_roommate2, randomNumber);
+                
             }
-            Console.ReadKey();
            
 
 
