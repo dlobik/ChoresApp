@@ -89,6 +89,9 @@ namespace projChorez
             //roommate[i].name has to complete the following chores
             //loop roommate.assignedChores[]
 
+
+            //testing / determining how I want assignment method to work
+            //this will eventually be moved to chore class
             for (int i = 0; i < roommateList.Count; i++)
             {
                 List<Chore> _choreList = new List<Chore>();
