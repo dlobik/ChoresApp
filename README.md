@@ -13,9 +13,7 @@ tolerance of eachother.
 Being able to have the logic adjust assigning rates when needed... 
 
 EX: If roommate1 has 10 chore points, and roommate2 has 20
-    assign roommate1 "harder" chores / assign roommate2 "easier" chores
-    
-    (by harder and easier, obviously mean chores with lower CP assigned to them)
+    assign roommate1 "harder" chores / assign roommate2 "easier" chores ***(by harder and easier, obviously mean chores with lower CP assigned to them)
     
 ---------------------------------------------------------------------------------------------    
  Future Goals
